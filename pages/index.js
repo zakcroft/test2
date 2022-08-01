@@ -21,8 +21,8 @@ export default function Home() {
       <div className={styles.container}>
         <h1>Posts</h1>
         {
-          posts.map(post => (
-              <Link href={`/posts/${post.id}`}>
+          posts.map((post, i) => (
+              <Link href={`/posts/${post.id}`} key={i}>
                 <a>
                   <h2>{post.title}</h2>
                 </a>
